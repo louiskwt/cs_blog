@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="zh-hk">
+<html>
   <head>
     <title>Louis Dev</title>
     <meta charset="utf-8" />
@@ -19,10 +19,9 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header">
-        <h1><a href="index.html">Louis Dev</a></h1>
+        <h1><a href="#">Louis Dev</a></h1>
         <nav class="links">
           <ul>
-            <li><a href="#">Posts</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -56,54 +55,100 @@
           <ul class="links">
             <li>
               <a href="#">
-                <h3>Web Development</h3>
+                <h3>Lorem ipsum</h3>
                 <p>Feugiat tempus veroeros dolor</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <h3>Programming</h3>
+                <h3>Dolor sit amet</h3>
                 <p>Sed vitae justo condimentum</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <h3>Career</h3>
+                <h3>Feugiat veroeros</h3>
                 <p>Phasellus sed ultricies mi congue</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <h3>Learning</h3>
+                <h3>Etiam sed consequat</h3>
                 <p>Porta lectus amet ultricies</p>
               </a>
             </li>
           </ul>
         </section>
+
+        <!-- Actions -->
+        <section>
+          <ul class="actions stacked">
+            <li><a href="#" class="button large fit">Log In</a></li>
+          </ul>
+        </section>
       </section>
+
       <!-- Main -->
       <div id="main">
         <section id="intro">
-								<a href="#" class="logo"><img src="static/images/logo.jpg" alt="logo"></a>
-								<header>
-									<h2>Louis Dev</h2>
-                  <p>A self-taught engineer sharing things about web development and tech career</p>
-								</header>
-							</section>
+          <a href="#" class="logo"
+            ><img src="static/images/logo.jpg" alt=""
+          /></a>
+          <header>
+            <h2>Louis Dev</h2>
+            <p>
+              Sharing my thoughts on tech career, web development, and learning
+              how to code
+            </p>
+          </header>
+        </section>
+
+        <!-- Post -->
+        {% block content %} {% endblock %}
+        <!-- Pagination -->
+        <ul class="actions pagination">
+          <li>
+            <a href="" class="disabled button large previous">Previous Page</a>
+          </li>
+          <li><a href="#" class="button large next">Next Page</a></li>
+        </ul>
       </div>
-      
-			<!-- Footer -->
-			<section id="footer">
-					<ul class="icons">
-						  <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-							<p class="copyright">&copy; Louis Dev | Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-						</section>
-				</section>
-  </div>
+
+      <!-- Sidebar -->
+      <section id="sidebar">
+        <!-- Intro -->
+
+        <!-- Footer -->
+        <section id="footer">
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon solid fa-envelope"
+                ><span class="label">Email</span></a
+              >
+            </li>
+          </ul>
+          <p class="copyright">
+            &copy; Louis Dev: <a href="http://html5up.net">HTML5 UP</a>. Images:
+            <a href="http://unsplash.com">Unsplash</a>.
+          </p>
+        </section>
+      </section>
+    </div>
 
     <!-- Scripts -->
     <script src="static/js/jquery.min.js"></script>
