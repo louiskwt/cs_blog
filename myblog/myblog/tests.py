@@ -3,7 +3,7 @@ from django.urls import reverse
 
 class HomePageTest(TestCase):
     def test_home_url(self):
-        response = self.client.get(reverse("home"))
+        response = self.client.get(reverse("blogs:home"))
         self.assertEqual(response.status_code, 200)
 
 
