@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 <!-- Content -->
 {% block content %}
+<section id="intro">
+  <a href="#" class="logo">
+    <img src="static/images/logo.jpg" alt=""/>
+  </a>
+  <header>
+    <h2>Louis Dev</h2>
+    <p>
+      Sharing my thoughts on tech career, web development, and learning
+              how to code
+    </p>
+  </header>
+</section>
+
 <!-- Posts -->
 {% for post in posts %}
 <!-- Post -->
@@ -8,7 +21,7 @@
   <header>
     <div class="title">
       <h2>
-        <a href="single.html">{{post.title}}</a>
+        <a href="{% url 'blogs:post_detail' post.id %}">{{post.title}}</a>
       </h2>
     </div>
     <div class="meta">
@@ -19,62 +32,68 @@
       /></a>
     </div>
   </header>
-  <a href="single.html" class="image featured"
+  <a href="{% url 'blogs:post_detail' post.id %}" class="image featured"
     ><img src="images/pic02.jpg" alt=""
   /></a>
-  <p>{{post.body}}</p>
+  <p>{{post.body|truncatewords:25|linebreaks}}</p>
   <footer>
     <ul class="actions">
       <li>
-        <a href="single.html" class="button large">Continue Reading</a>
+        <a href="{% url 'blogs:post_detail' post.id %}" class="button large">Continue Reading</a>
       </li>
     </ul>
     <ul class="stats">
       <li><a href="#">General</a></li>
-      <li><a href="#" class="icon solid fa-heart">28</a></li>
+      <!-- <li><a href="#" class="icon solid fa-heart">28</a></li> -->
       <li><a href="#" class="icon solid fa-comment">128</a></li>
     </ul>
   </footer>
 </article>
 
 {% endfor %}
-<!-- Post -->
-<article class="post">
-  <header>
-    <div class="title">
-      <h2>
-        <a href="single.html">Ultricies sed magna euismod enim vitae gravida</a>
-      </h2>
-      <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-    </div>
-    <div class="meta">
-      <time class="published" datetime="2015-10-25">October 25, 2015</time>
-      <a href="#" class="author"
-        ><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt=""
-      /></a>
-    </div>
-  </header>
-  <a href="single.html" class="image featured"
-    ><img src="images/pic02.jpg" alt=""
-  /></a>
-  <p>
-    Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed
-    mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac
-    accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
-    corper.
-  </p>
-  <footer>
-    <ul class="actions">
-      <li>
-        <a href="single.html" class="button large">Continue Reading</a>
-      </li>
-    </ul>
-    <ul class="stats">
-      <li><a href="#">General</a></li>
-      <li><a href="#" class="icon solid fa-heart">28</a></li>
-      <li><a href="#" class="icon solid fa-comment">128</a></li>
-    </ul>
-  </footer>
-</article>
+
+<!-- Pagination -->
+<ul class="actions pagination">
+  <li>
+    <a href="" class="disabled button large previous">Previous Page</a>
+  </li>
+  <li><a href="#" class="button large next">Next Page</a></li>
+</ul>
+
+{% endblock %}
+
+{% block footer %}
+ <!-- Sidebar -->
+      <section id="sidebar">
+        <!-- Footer -->
+        <section id="footer">
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon solid fa-envelope"
+                ><span class="label">Email</span></a
+              >
+            </li>
+          </ul>
+          <p class="copyright">
+            &copy; Louis Dev. Images:
+            <a href="http://unsplash.com">Unsplash</a>.
+          </p>
+        </section>
+      </section>
 
 {% endblock %}

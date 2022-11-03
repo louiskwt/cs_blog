@@ -90,64 +90,14 @@
 
       <!-- Main -->
       <div id="main">
-        <section id="intro">
-          <a href="#" class="logo"
-            ><img src="static/images/logo.jpg" alt=""
-          /></a>
-          <header>
-            <h2>Louis Dev</h2>
-            <p>
-              Sharing my thoughts on tech career, web development, and learning
-              how to code
-            </p>
-          </header>
-        </section>
 
         <!-- Post -->
         {% block content %} {% endblock %}
-        <!-- Pagination -->
-        <ul class="actions pagination">
-          <li>
-            <a href="" class="disabled button large previous">Previous Page</a>
-          </li>
-          <li><a href="#" class="button large next">Next Page</a></li>
-        </ul>
+
       </div>
 
-      <!-- Sidebar -->
-      <section id="sidebar">
-        <!-- Intro -->
-
-        <!-- Footer -->
-        <section id="footer">
-          <ul class="icons">
-            <li>
-              <a href="#" class="icon brands fa-twitter"
-                ><span class="label">Twitter</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands fa-facebook-f"
-                ><span class="label">Facebook</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands fa-instagram"
-                ><span class="label">Instagram</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon solid fa-envelope"
-                ><span class="label">Email</span></a
-              >
-            </li>
-          </ul>
-          <p class="copyright">
-            &copy; Louis Dev: <a href="http://html5up.net">HTML5 UP</a>. Images:
-            <a href="http://unsplash.com">Unsplash</a>.
-          </p>
-        </section>
-      </section>
+      {% block footer %}
+      {% endblock %}
     </div>
 
     <!-- Scripts -->
