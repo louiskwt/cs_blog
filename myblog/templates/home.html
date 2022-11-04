@@ -2,14 +2,14 @@
 <!-- Content -->
 {% block content %}
 <section id="intro">
-  <a href="#" class="logo">
-    <img src="static/images/logo.jpg" alt=""/>
+  <a href="{% url 'blogs:home' %}" class="logo">
+    <img src="static/images/logo.jpg" alt="" />
   </a>
   <header>
     <h2>Louis Dev</h2>
     <p>
-      Sharing my thoughts on tech career, web development, and learning
-              how to code
+      Sharing my thoughts on tech career, web development, and learning how to
+      code
     </p>
   </header>
 </section>
@@ -39,7 +39,9 @@
   <footer>
     <ul class="actions">
       <li>
-        <a href="{% url 'blogs:post_detail' post.id %}" class="button large">Continue Reading</a>
+        <a href="{% url 'blogs:post_detail' post.id %}" class="button large"
+          >Continue Reading</a
+        >
       </li>
     </ul>
     <ul class="stats">
@@ -60,40 +62,35 @@
   <li><a href="#" class="button large next">Next Page</a></li>
 </ul>
 
-{% endblock %}
-
-{% block footer %}
- <!-- Sidebar -->
-      <section id="sidebar">
-        <!-- Footer -->
-        <section id="footer">
-          <ul class="icons">
-            <li>
-              <a href="#" class="icon brands fa-twitter"
-                ><span class="label">Twitter</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands fa-facebook-f"
-                ><span class="label">Facebook</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon brands fa-instagram"
-                ><span class="label">Instagram</span></a
-              >
-            </li>
-            <li>
-              <a href="#" class="icon solid fa-envelope"
-                ><span class="label">Email</span></a
-              >
-            </li>
-          </ul>
-          <p class="copyright">
-            &copy; Louis Dev. Images:
-            <a href="http://unsplash.com">Unsplash</a>.
-          </p>
-        </section>
-      </section>
+{% endblock %} {% block footer %}
+<!-- Sidebar -->
+<section id="sidebar">
+  <!-- Footer -->
+  <section id="footer">
+    <ul class="icons">
+      <li>
+        <a href="https://twitter.com/kawingt2" class="icon brands fa-twitter"
+          ><span class="label">Twitter</span></a
+        >
+      </li>
+      <!-- <li>
+        <a href="#" class="icon brands fa-facebook-f"
+          ><span class="label">Facebook</span></a
+        >
+      </li> -->
+      <li>
+        <a
+          href="https://www.instagram.com/louis_tkw/"
+          class="icon brands fa-instagram"
+          ><span class="label">Instagram</span></a
+        >
+      </li>
+    </ul>
+    <p class="copyright">
+      &copy; Louis Dev. Images:
+      <a href="http://unsplash.com">Unsplash</a>.
+    </p>
+  </section>
+</section>
 
 {% endblock %}
