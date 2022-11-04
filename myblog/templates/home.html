@@ -28,12 +28,12 @@
       <time class="published">{{post.published_at}}</time>
       <a href="#" class="author"
         ><span class="name">{{post.author}}</span
-        ><img src="static/images/avatar.jpg" alt=""
+        ><img src="static/images/avatar.jpg" alt="avatar"
       /></a>
     </div>
   </header>
   <a href="{% url 'blogs:post_detail' post.id %}" class="image featured"
-    ><img src="static/images/pic02.jpg" alt=""
+    ><img src="{{ post.cover }}" alt="cover-image"
   /></a>
   <p>{{post.body|truncatewords:25|linebreaks}}</p>
   <footer>

@@ -18,6 +18,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=2, choices=Status.choices, default=Status.DRAFT)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    cover = models.CharField(max_length=512, default=None, blank=True, null=True)
 
     objects = models.Manager()
     published = PublishedManager()

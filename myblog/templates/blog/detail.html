@@ -17,7 +17,9 @@
       </a>
     </div>
   </header>
-  <!-- <span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
+  <span class="image featured"
+    ><img src="{{ post.cover }}" alt="cover-image"
+  /></span>
   <p>{{post.body|truncatewords:25|linebreaks}}</p>
   <footer>
     <ul class="stats">
