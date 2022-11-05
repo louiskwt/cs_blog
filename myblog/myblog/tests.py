@@ -12,3 +12,14 @@ class HomeTemplateTest(TestCase):
         response = self.client.get("/")
         self.assertTemplateUsed(response, 'home.html')
         self.assertTemplateUsed(response, 'base.html')
+
+class AboutPageTest(TestCase):
+    def test_about_url(self):
+        response = self.client.get(reverse("about"))
+        self.assertEqual(response.status_code, 200)
+
+class AboutTemplateTest(TestCase):
+    def test_about_tempate(self):
+        response = self.client.get(reverse("about"))
+        self.assertTemplateUsed(response, "about.html")
+        self.assertTemplateUsed(response, "base.html")
