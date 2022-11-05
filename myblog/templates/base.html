@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--
 	Future Imperfect by HTML5 UP
@@ -22,7 +23,7 @@
         <h1><a href="{% url 'blogs:home' %}">Louis Dev</a></h1>
         <nav class="links">
           <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>

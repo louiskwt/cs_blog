@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+<!-- Content Starts here -->
+
+{% block content %}
+<section id="blurb">
+    <h2>About</h2>
+  <a href="{% url 'blogs:home' %}" class="logo">
+    <img src="static/images/logo.jpg" alt="" />
+  </a>
+  <h2>Louis Dev</h2>
+    <p>
+        Hi, my name is Louis. I'm currently a full-stack developer working at a start-up in Hong Kong.
+    </p>
+    <p>
+      As a self-taught developer without a CS degree, I relied heavily on online information to learn how to code and figure out how to land a job as a dev.
+      <br/>
+      That's why now I want to start giving back to the community by sharing what I have learned through working in tech.
+    </p>
+    <p>
+        Currently, I'm working with NodeJS, React, TypeScript, and Python at work. But after work, I'm learning Go and Django while building side projects just for fun.
+    </p>
+    <p>
+        If you are interested in the technology I'm using or learning or just want to learn about working in tech, please check out my post.
+    </p>
+    <ul class="actions">
+        <li><a href="https://www.louistsang.me/" class="button large fit" target="_blank">My Portfolio</a></li>
+    </ul>
+</section>
+
+
+{% endblock %} 
+
+{% block footer %}
+<!-- Footer -->
+<section id="footer">
+  <ul class="icons">
+    <li>
+      <a href="https://twitter.com/kawingt2" class="icon brands fa-twitter"
+        ><span class="label">Twitter</span></a
+      >
+    </li>
+    <!-- <li>
+      <a href="#" class="icon brands fa-facebook-f"
+        ><span class="label">Facebook</span></a
+      >
+    </li> -->
+    <li>
+      <a
+        href="https://www.instagram.com/louis_tkw/"
+        class="icon brands fa-instagram"
+        ><span class="label">Instagram</span></a
+      >
+    </li>
+  </ul>
+  <p class="copyright">
+    &copy; Louis Dev. Images: <a href="http://unsplash.com">Unsplash</a>.
+  </p>
+</section>
+{% endblock %}
