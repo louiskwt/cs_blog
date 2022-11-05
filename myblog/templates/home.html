@@ -1,19 +1,7 @@
 {% extends "base.html" %}
 <!-- Content -->
 {% block content %}
-<section id="intro">
-  <a href="{% url 'blogs:home' %}" class="logo">
-    <img src="static/images/logo.jpg" alt="" />
-  </a>
-  <header>
-    <h2>Louis Dev</h2>
-    <p>
-      Sharing my thoughts on tech career, web development, and learning how to
-      code
-    </p>
-  </header>
-</section>
-
+<div id="main">
 <!-- Posts -->
 {% for post in posts %}
 <!-- Post -->
@@ -62,9 +50,25 @@
   <li><a href="#" class="button large next">Next Page</a></li>
 </ul>
 
-{% endblock %} {% block footer %}
+</div>
+{% endblock %}
+
+
+{% block footer %}
 <!-- Sidebar -->
 <section id="sidebar">
+  <section id="intro">
+  <a href="{% url 'blogs:home' %}" class="logo">
+    <img src="static/images/logo.jpg" alt="" />
+  </a>
+  <header>
+    <h2>Louis Dev</h2>
+    <p>
+      Sharing my thoughts on tech career, web development, and learning how to
+      code
+    </p>
+  </header>
+</section>
   <!-- Footer -->
   <section id="footer">
     <ul class="icons">
@@ -94,3 +98,4 @@
 </section>
 
 {% endblock %}
+

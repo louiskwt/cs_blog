@@ -3,7 +3,8 @@
 <!-- Content Starts here -->
 
 {% block content %}
-<section id="blurb">
+<div id="main">
+    <section id="blurb">
     <h2>About</h2>
   <a href="{% url 'blogs:home' %}" class="logo">
     <img src="static/images/logo.jpg" alt="" />
@@ -27,7 +28,7 @@
         <li><a href="https://www.louistsang.me/" class="button large fit" target="_blank">My Portfolio</a></li>
     </ul>
 </section>
-
+</div>
 
 {% endblock %} 
 
