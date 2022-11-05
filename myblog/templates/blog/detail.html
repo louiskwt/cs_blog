@@ -2,8 +2,8 @@
 
 <!-- Content Starts here -->
 {% block content %}
-
-<!-- Post -->
+<div id="main">
+  <!-- Post -->
 <article class="post">
   <header>
     <div class="title">
@@ -34,7 +34,11 @@
   <li><a href="{% url 'blogs:home' %}" class="button large next">Back</a></li>
 </ul>
 
-{% endblock %} {% block footer %}
+</div>
+
+{% endblock %} 
+
+{% block footer %}
 <!-- Footer -->
 <section id="footer">
   <ul class="icons">

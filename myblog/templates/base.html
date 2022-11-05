@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="static/css/main.css" />
   </head>
-  <body class="is-preload">
+  <body class="{% if 'about' in request.path %} single {% endif %} is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
