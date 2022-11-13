@@ -2,73 +2,64 @@
 <!-- Content -->
 {% block content %}
 <div id="main">
-<!-- Posts -->
-{% for post in posts %}
-<!-- Post -->
-<article class="post">
-  <header>
-    <div class="title">
-      <h2>
-        <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
-      </h2>
-    </div>
-    <div class="meta">
-      <time class="published">{{post.published_at|date:'Y-m-d'}}</time>
-      <a href="#" class="author"
-        ><span class="name">{{post.author}}</span
-        ><img src="static/images/avatar.jpg" alt="avatar"
-      /></a>
-    </div>
-  </header>
-  <a href="{{ post.get_absolute_url }}" class="image featured"
-    ><img src="{{ post.cover }}" alt="cover-image"
-  /></a>
-  <p>{{post.body|truncatewords:25|linebreaks}}</p>
-  <footer>
-    <ul class="actions">
-      <li>
-        <a href="{{ post.get_absolute_url }}" class="button large"
-          >Continue Reading</a
-        >
-      </li>
-    </ul>
-    <ul class="stats">
-      <li><a href="#">General</a></li>
-      <!-- <li><a href="#" class="icon solid fa-heart">28</a></li> -->
-      <li><a href="#" class="icon solid fa-comment">128</a></li>
-    </ul>
-  </footer>
-</article>
+  <!-- Posts -->
+  {% for post in posts %}
+  <!-- Post -->
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>
+          <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
+        </h2>
+      </div>
+      <div class="meta">
+        <time class="published">{{post.published_at|date:'Y-m-d'}}</time>
+        <a href="#" class="author"
+          ><span class="name">{{post.author}}</span
+          ><img src="static/images/avatar.jpg" alt="avatar"
+        /></a>
+      </div>
+    </header>
+    <a href="{{ post.get_absolute_url }}" class="image featured"
+      ><img src="{{ post.cover }}" alt="cover-image"
+    /></a>
+    <p>{{post.body|truncatewords:25|linebreaks}}</p>
+    <footer>
+      <ul class="actions">
+        <li>
+          <a href="{{ post.get_absolute_url }}" class="button large"
+            >Continue Reading</a
+          >
+        </li>
+      </ul>
+      <ul class="stats">
+        <li><a href="#">General</a></li>
+        <!-- <li><a href="#" class="icon solid fa-heart">28</a></li> -->
+        <li><a href="#" class="icon solid fa-comment">128</a></li>
+      </ul>
+    </footer>
+  </article>
 
-{% endfor %}
+  {% endfor %}
 
-<!-- Pagination -->
-<ul class="actions pagination">
-  <li>
-    <a href="" class="disabled button large previous">Previous Page</a>
-  </li>
-  <li><a href="#" class="button large next">Next Page</a></li>
-</ul>
-
+  <!-- Pagination -->
+  {% include "pagination.html" with page=posts %}
 </div>
-{% endblock %}
-
-
-{% block footer %}
+{% endblock %} {% block footer %}
 <!-- Sidebar -->
 <section id="sidebar">
   <section id="intro">
-  <a href="{% url 'blogs:home' %}" class="logo">
-    <img src="static/images/logo.jpg" alt="" />
-  </a>
-  <header>
-    <h2>Louis Dev</h2>
-    <p>
-      Sharing my thoughts on tech career, web development, and learning how to
-      code
-    </p>
-  </header>
-</section>
+    <a href="{% url 'blogs:home' %}" class="logo">
+      <img src="static/images/logo.jpg" alt="" />
+    </a>
+    <header>
+      <h2>Louis Dev</h2>
+      <p>
+        Sharing my thoughts on tech career, web development, and learning how to
+        code
+      </p>
+    </header>
+  </section>
   <!-- Footer -->
   <section id="footer">
     <ul class="icons">
@@ -98,4 +89,3 @@
 </section>
 
 {% endblock %}
-
